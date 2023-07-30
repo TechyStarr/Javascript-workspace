@@ -463,3 +463,113 @@ const friends = ['kate', 'lina', 'darcy', 'kitan', 45, undefined, null]
 
 // const value =  `Hey it's ${name} and he is ${age} years old` 
 // console.log(value)
+
+
+// // Array properties and methods
+// let names = ['john', 'bob', 'barry', 'olga', 'ben']
+
+// //length
+// console.log(names.length)
+// console.log(names[3]);
+// console.log(names[names.length-1]);
+
+// // concat
+// const lastNames = ['pep', 'roni', 'oni', 'bana']
+// const allNames = names.concat(lastNames)
+// console.log(allNames)
+// // reverse
+// console.log(allNames.reverse())
+
+// unshift
+// allNames.unshift('sas')
+// allNames.unshift('isa')
+// console.log(allNames)
+
+// // shift
+// allNames.shift('sas');
+// allNames.shift('isa');
+// console.log(allNames);
+
+// push
+// allNames.push('sas')
+// console.log(allNames)
+
+// pop
+// allNames.pop()
+// allNames.pop()
+// allNames.pop()
+// console.log(allNames)
+
+// // splice - mutates original array
+// const specificNames = allNames.splice(4, 1)
+// console.log(specificNames)
+// console.log(allNames)
+
+
+// // Reference vs Value
+// // Primitive data types - String, Number, Symbol, Boolean, undefined, null
+// // Non primitive - Arrays, Functions, Objects = Object
+// // typeof
+
+// // when assigning primitive data types value to a variable
+//     //any changes are made directly to that value, without
+//     // affecting original value
+// const number = 1
+// let number2 = number
+// number2 = 7
+// console.log(`The first value is ${number}`)
+// console.log(`The second value is ${number2}`)
+
+
+// // when assigning non-primitive data type value to a variable 
+// //     it is done by reference any changes will affect all
+// //     the reference.
+// let person = {name: 'bob'}
+// let person2 = { ...person } // let person2 = {...person} gets the copy of the reference object
+// person2.name = 'susy'
+// console.log(`The name of the first person is ${person.name}`)
+// console.log(`The name of the second person is ${person2.name}`);
+
+
+// // Null and Undefined both represent no value
+// // undefined - "javascript can not find any value for this"
+
+// let number = 20 + null
+// console.log(number)
+// let number2 = 20 + undefined
+// console.log(number2)
+
+
+// // Truthy and Falsy
+// // "", '', ``, 0, -0, Nan, false, null, undefined
+
+// const bool1 = true
+// const bool2 = 2 > 1
+
+// const text = 'john'
+// if (text) {
+//     console.log('Hey, the value is truthy');
+// } else {
+//     console.log('Hey, the value is falsy')
+// }
+
+// Unary operator = typeof
+// let text = 'some text'
+// console.log(typeof text) // operand
+
+// binary operator - assignment
+// let number = 3
+// let number2 = 2 + 5
+
+// ternary operator 
+// condition ? (runs if true) : (runs if false)
+
+// const value = 2 > 1
+
+// value ? console.log('value is true') : console.log('value is false')
+
+
+// Global Scope vs Local Scope
+// any variable outside code block {} is said to be in Global scope
+// can be access anywhere in the program
+// Gotchas : name collisions, modify by mistake
