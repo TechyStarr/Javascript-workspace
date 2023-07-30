@@ -573,3 +573,130 @@ const friends = ['kate', 'lina', 'darcy', 'kitan', 45, undefined, null]
 // any variable outside code block {} is said to be in Global scope
 // can be access anywhere in the program
 // Gotchas : name collisions, modify by mistake
+
+// let name = 'bob'
+// name =  'peter'
+
+// function calculate() {
+//     console.log(name)
+//     name = 'orange'
+//     function inner () {
+//         name = 'inner name value'
+//         console.log(`this is from inner function ${name}`)
+//     }
+//     inner()
+// }
+// calculate()
+
+// if (true) {
+//     console.log(name)
+//     name = 'kate'
+// }
+// console.log(`my name is ${name} and I'm awesome`)
+
+
+// // Local Scope - cannot be accessed from outside code blocks
+// // if - NOT VAR
+
+// let name = 'boo'
+
+// function calculate () {
+//     const name = 'john'
+//     const age = 24
+//     globalVariable = 'global variable'
+// }
+
+// calculate()
+// console.log(globalVariable)
+
+// if (true) {
+//     const name = 'john'
+// }
+// console.log(`my name is ${name} and I'm awesome`);
+
+
+
+
+// // Variable lookup 
+// const globalNumber = 5
+
+// function add(num1, num2) {
+//     const globalNumber = 20 // js in the absence of this will do a lookup and use the one defined outside the local scope/function body
+//     const result = num1 + num2 + globalNumber
+//     function multiply () {
+//         const globalNumber = 100
+//         const multiplyResult = result * globalNumber
+//         console.log(multiplyResult)
+//     }
+//     multiply()
+//     return result
+// }
+
+// console.log(add(3, 4))
+
+
+
+// Callback functions, high order functions, functions as First
+    // class objects/citizens
+// Functions are first class objects - stored in a variable
+    // expression, passed as an argument to another function
+    // return from the function (closure)
+
+// High Order Function - accepts another function as an argument
+    // or returns another function as a result
+
+// Callback function - passed to another function as an argument
+    // and executed inside that function
+
+// function morning(name) { //callback function
+//     return `Good morning ${name.toUpperCase()}`
+// }
+
+// function greet(name, callb) { high order function
+//     const myName = 'john'
+//     console.log(`${callb(name)}, my name is ${myName}`)
+// }
+
+// greet('bob', morning)
+
+
+
+
+// Array Iterators
+// forEach, map, filter, find, reduce
+// iterate over array - no loop required
+// accept CALLBACK function as an argument, calls callback
+    // against eaxh item in a array. reference item in the 
+    // callback parameter
+
+// forEach - does not return new array
+
+const people = [
+    {
+        name: 'bob', 
+        age: 23,
+        position: "Developer"
+    },
+    {
+        name: 'peter', 
+        age: 33,
+        position: "Data analyst"
+    },
+    {
+        name: 'bob', 
+        age: 22,
+        position: "Designer"
+    }
+]
+
+function showPerson(person) {
+    console.log(person)
+    console.log(person.position.toUpperCase())
+}
+
+// people.forEach(showPerson)
+
+people.forEach(function(item) {
+    console.log(item.position.toUpperCase());
+})
+
