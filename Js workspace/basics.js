@@ -671,6 +671,42 @@ const friends = ['kate', 'lina', 'darcy', 'kitan', 45, undefined, null]
 
 // forEach - does not return new array
 
+// const people = [
+//     {
+//         name: 'bob', 
+//         age: 23,
+//         position: "Developer"
+//     },
+//     {
+//         name: 'peter', 
+//         age: 33,
+//         position: "Data analyst"
+//     },
+//     {
+//         name: 'bob', 
+//         age: 22,
+//         position: "Designer"
+//     }
+// ]
+
+// function showPerson(person) {
+//     console.log(person)
+//     console.log(person.position.toUpperCase())
+// }
+
+// // people.forEach(showPerson)
+
+// people.forEach(function(item) {
+//     console.log(item.position.toUpperCase());
+// })
+
+
+
+// map - does not return a new array
+// does not change size of original array
+// uses values from original array when making new ones
+// take any data, modify and assign to new array
+
 const people = [
     {
         name: 'bob', 
@@ -689,14 +725,19 @@ const people = [
     }
 ]
 
-function showPerson(person) {
-    console.log(person)
-    console.log(person.position.toUpperCase())
-}
-
-// people.forEach(showPerson)
-
-people.forEach(function(item) {
-    console.log(item.position.toUpperCase());
+const ages = people.map(function(person){
+    return person.age
+})
+const newPeople = people.map(function (person) {
+    return {
+        firstName: person.name.toUpperCase(),
+        oldAge: person.age + 20
+    }
 })
 
+const names = people.map(function (person) {
+    return `<h1>${person.name}</h1>`
+})
+
+document.body.innerHTML = names.join('')
+console.log(names)
