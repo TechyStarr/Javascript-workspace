@@ -864,3 +864,12 @@ const friends = ['kate', 'lina', 'darcy', 'kitan', 45, undefined, null]
 // }, 1000)
 
 // console.log(`total: $${total}`);
+
+
+
+// square bracket notation
+const subject = 'math'
+
+const total = {}
+total[subject] = 'some value'
+console.log(total)
