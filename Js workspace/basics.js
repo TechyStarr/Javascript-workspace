@@ -707,37 +707,160 @@ const friends = ['kate', 'lina', 'darcy', 'kitan', 45, undefined, null]
 // uses values from original array when making new ones
 // take any data, modify and assign to new array
 
-const people = [
-    {
-        name: 'bob', 
-        age: 23,
-        position: "Developer"
-    },
-    {
-        name: 'peter', 
-        age: 33,
-        position: "Data analyst"
-    },
-    {
-        name: 'bob', 
-        age: 22,
-        position: "Designer"
-    }
-]
+// const people = [
+//     {
+//         name: 'bob', 
+//         age: 23,
+//         position: "Developer"
+//     },
+//     {
+//         name: 'peter', 
+//         age: 33,
+//         position: "Data analyst"
+//     },
+//     {
+//         name: 'bob', 
+//         age: 22,
+//         position: "Designer"
+//     }
+// ]
 
-const ages = people.map(function(person){
-    return person.age
-})
-const newPeople = people.map(function (person) {
-    return {
-        firstName: person.name.toUpperCase(),
-        oldAge: person.age + 20
-    }
-})
+// const ages = people.map(function(person){
+//     return person.age
+// })
+// const newPeople = people.map(function (person) {
+//     return {
+//         firstName: person.name.toUpperCase(),
+//         oldAge: person.age + 20
+//     }
+// })
 
-const names = people.map(function (person) {
-    return `<h1>${person.name}</h1>`
-})
+// const names = people.map(function (person) {
+//     return `<h1>${person.name}</h1>`
+// })
 
-document.body.innerHTML = names.join('')
-console.log(names)
+// document.body.innerHTML = names.join('')
+// console.log(names)
+
+
+
+
+
+// const people = [
+//     {
+//         name: 'bob', 
+//         age: 23,
+//         position: "Developer"
+//     },
+//     {
+//         name: 'peter', 
+//         age: 33,
+//         position: "Data analyst"
+//     },
+//     {
+//         name: 'bob', 
+//         age: 22,
+//         position: "Designer"
+//     }
+// ]
+
+// Filter
+// does not return a new array
+// can manipulate the size of the new array
+// returns based on condition
+// const youngPeople = people.filter(function(person) {
+//     return person.age <= 25
+// })
+
+// const developers = people.filter(function(person) {
+//     return person.position === 'Developer'
+// })
+// console.log(developers)
+
+
+
+// find
+// returns single instance, an object
+// returns first match, and undefined if there's no match
+// great for getting unique value
+
+// const people = [
+//   {
+//     id: 1,
+//     name: 'bob',
+//     age: 23,
+//     position: 'Developer',
+//   },
+//   {
+//     id: 2,
+//     name: 'peter',
+//     age: 33,
+//     position: 'Data analyst',
+//   },
+//   {
+//     id:3,
+//     name: 'bob',
+//     age: 22,
+//     position: 'Designer',
+//   },
+// ];
+
+// const person = people.find(function(person) {
+//     return person.id === 3
+// })
+
+// const names = ['bob', 'kate']
+// console.log(
+//     names.find(function (name) {
+//         return name === 'bob'
+//     })
+// )
+
+// console.log(person)
+
+// const person2 = people.filter(function (person) {
+//     return person.id === 3;
+// });
+
+// console.log(person2[0].name)
+
+
+
+
+// // reduce
+// // iterates, callback function
+// // reduces the values in the array to a single value- array, number, object
+// // 1 parameter ('acc') - total of all calculations
+// // 2 parameter ('curr') - current iteration/value
+// const people = [
+//   {
+//     id: 1,
+//     name: 'bob',
+//     age: 23,
+//     position: 'Developer',
+//     salary: 200
+//   },
+//   {
+//     id: 2,
+//     name: 'peter',
+//     age: 33,
+//     position: 'Data analyst',
+//     salary: 300
+//   },
+//   {
+//     id:3,
+//     name: 'bob',
+//     age: 22,
+//     position: 'Designer',
+//     salary: 200
+//   },
+// ];
+
+// const total = people.reduce(function (acc, currItem) {
+//     console.log(`total: $${acc}`)
+//     console.log(`current money: ${currItem.salary}`)
+//     acc += currItem.salary
+//     return acc
+// }, 1000)
+
+// console.log(`total: $${total}`);
