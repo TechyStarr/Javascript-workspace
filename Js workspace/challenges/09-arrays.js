@@ -67,9 +67,16 @@
 //     }
 // 2. assign to survey and log
 
-const survey = students.reduce(function(survey, student){
-    console.log(student.favoriteSubject);
-    const favSubject = student.favoriteSubject
-    survey[favSubject] = 'random value'
-    return survey
-}, {})
+// const survey = students.reduce(function(survey, student){
+//     // console.log(student.favoriteSubject);
+//     const favSubject = student.favoriteSubject
+
+//     if (survey[favSubject]) {
+//         survey[favSubject] = survey[favSubject] + 5
+//     } else {
+//     survey[favSubject] = 2
+//     }
+//     return survey
+// }, {})
+
+// console.log(survey)

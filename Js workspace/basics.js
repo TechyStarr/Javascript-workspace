@@ -867,9 +867,60 @@ const friends = ['kate', 'lina', 'darcy', 'kitan', 45, undefined, null]
 
 
 
-// square bracket notation
-const subject = 'math'
+// // square bracket notation
+// const subject = 'math'
 
-const total = {}
-total[subject] = 'some value'
-console.log(total)
+// const total = {}
+// total[subject] = 'some value'
+// console.log(total)
+
+
+
+// Math
+// Standard built-in objects
+
+// const num = Math.floor(Math.random() * 10 + 1)
+// console.log(num)
+
+
+
+
+// Date Object
+const months = [
+    "January",
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August', 
+    'September',
+    'October',
+    'November',
+    'December'
+]
+
+const days = [
+    'Sunday',
+    'Monday',
+    'Tuesday',
+    'Wednesday',
+    'Thursday',
+    'Friday',
+    'Saturday'
+]
+
+const date = new Date('1/12/2005')
+const month = date.getMonth()
+console.log(months[month])
+
+const day = date.getDay()
+console.log(date.getDate())
+console.log(days[day])
+console.log(date.getFullYear())
+
+const sentence = `${days[day]}, ${date.getDate()}, ${months[month]}, ${date.getFullYear()}`
+console.log(sentence)
+
+document.body.innerHTML = sentence
